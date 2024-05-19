@@ -10,10 +10,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class telacadas extends JFrame implements ActionListener {
+public class telacadas implements ActionListener {
 
     Produto pro;
-    ArrayList<Produto> list = new ArrayList<>();
+    ArrayList<Produto> list = new ArrayList<Produto>();
 
     JFrame telaCadas = new JFrame("Cadastrar Produto");
     JPanel painel = new JPanel();
@@ -57,13 +57,19 @@ public class telacadas extends JFrame implements ActionListener {
         painel.add(txtvalor);
         painel.add(lbquantidade);
         painel.add(txtquantidade);
-        painel.add(c1);
         painel.add(btsalvar);
         painel.add(btlistar);
 
 
         telaCadas.getContentPane().add(painel);
+        telaCadas.setVisible(true);
 
+
+    }
+
+    public static void main(String[] args) {
+        telacadas telacadas = new telacadas();
+        telacadas.criarTela();
     }
 
 
@@ -79,16 +85,12 @@ public class telacadas extends JFrame implements ActionListener {
             txtdesc.setText("");
             txtvalor.setText("");
             txtquantidade.setText("");
-            } else if (e.getSource() == btlistar) {
-                StringBuilder produtos = new StringBuilder();
-                for (Produto p : list){
-                    produtos.append("Produto: ").append(p.getDescricao());
-                    produtos.append("\n Valor: R$ ").append(p.getValor());
-                    produtos.append("\n Quantidade disponível ").append(p.getQuantidade());
-                }
-                JOptionPane.showMessageDialog(null, produtos.toString());
+
+        }
+
+        if (e.getSource() == btlistar) {
+                JOptionPane.showMessageDialog(null, " Produto: " + pro.getDescricao() + "\n valor: R$ " + pro.getValor() + "\n Quantidade disponível: " + pro.getQuantidade());
             }
 
     }
-
 }

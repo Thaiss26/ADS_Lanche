@@ -54,13 +54,10 @@ public class Tela1 implements ActionListener {
         }
 
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == cadastrarProduto){
-            telacadas telacadas = new telacadas();
-            telacadas.setVisible(true);
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            
+            throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
         }
-        throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
+    
     }
-
-}
