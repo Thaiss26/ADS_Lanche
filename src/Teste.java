@@ -13,10 +13,28 @@ public class Teste {
         list.add(pro2);
         list.add(pro3);
 
-        System.out.println("O produto 1 eh: " + pro1.getDescricao()+ " " + "R$"+ pro1.getValor()  + "\n " + pro1.getQuantidade() + " disponível");
+        for(Produto x: list){
+            System.out.println("O Produto: " + x.getDescricao());
+            System.out.println("O Valor: R$ " + x.getValor());
+            System.out.println("A Quantidade disponível: " + x.getQuantidade());
+            System.out.println("-------------------------------");
+        }
 
-        System.out.println("\nO produto 2 eh: " + pro2.getDescricao()+ " " + "R$" + pro2.getValor() + "\n " + pro2.getQuantidade() + " disponível");
+        list.remove(pro2);
 
-        System.out.println("\nO produto 3 eh: " + pro3.getDescricao()+ " " + "R$" + pro3.getValor() + "\n " + pro3.getQuantidade() + " disponível");
-    }
+        for(Produto x: list){
+            System.out.println("O produto: " + x.getDescricao());
+            System.out.println("O valor: R$ " + x.getValor());
+            System.out.println("A Quantidade disponível: " + x.getQuantidade());
+            System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+        }
+
+        list.add(pro2);
+        for(Produto x: list){
+            System.out.println("O Produto: " + x.getDescricao());
+            System.out.println("O Valor: R$ " + x.getValor());
+            System.out.println("A Quantidade disponível: " + x.getQuantidade());
+            System.out.println("-------------------------------");
+        }
+}
 }
