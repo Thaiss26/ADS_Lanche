@@ -85,7 +85,7 @@ public class telacadas extends JFrame implements ActionListener {
             Integer q = Integer.parseInt(txtquantidade.getText());
             pro = new Produto(d, v, q);
             list.add(pro);
-            JOptionPane.showMessageDialog(null, "Produto Adicionado");
+            JOptionPane.showMessageDialog(null, "Produto Adicionado e disponível para pedidos");
             txtdesc.setText("");
             txtvalor.setText("");
             txtquantidade.setText("");
