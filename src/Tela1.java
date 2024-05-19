@@ -1,19 +1,15 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-
-
 
 public class Tela1 implements ActionListener {
     
     Produto pro;
 
     JFrame tela = new JFrame("ADS Lanches");
-
 
     JMenuBar mb = new JMenuBar();
     JMenu cadastrarMenu = new JMenu("Cadastro");
@@ -23,11 +19,11 @@ public class Tela1 implements ActionListener {
     JMenuItem historicoMenuItem = new JMenuItem("Histórico de Pedido");
     JMenu buscarMenu = new JMenu("Buscar");
 
-
     void criarTela(){
         tela.setSize(500,500);
-        tela.setLocation(200,200);
-        
+        tela.setLocation(500,150);
+        tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         mb.add(cadastrarMenu);
         mb.add(pedidoMenu);
         mb.add(buscarMenu);
@@ -42,7 +38,6 @@ public class Tela1 implements ActionListener {
         cadastrarProduto.addActionListener(this);
 
         tela.setVisible(true);
-
     }
 
 

@@ -36,5 +36,5 @@ public class Teste {
             System.out.println("A Quantidade disponível: " + x.getQuantidade());
             System.out.println("-------------------------------");
         }
-}
+    }
 }
