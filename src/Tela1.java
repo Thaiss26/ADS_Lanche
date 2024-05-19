@@ -19,29 +19,30 @@ public class Tela1 implements ActionListener {
     JMenuItem historicoMenuItem = new JMenuItem("Histórico de Pedido");
     JMenu buscarMenu = new JMenu("Buscar");
 
-    void criarTela(){
-        tela.setSize(500,500);
-        tela.setLocation(500,150);
-        tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        void criarTela(){
+            tela.setSize(500,500);
+            tela.setLocation(500,150);
+            tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        mb.add(cadastrarMenu);
-        mb.add(pedidoMenu);
-        mb.add(buscarMenu);
+            mb.add(cadastrarMenu);
+            mb.add(pedidoMenu);
+            mb.add(buscarMenu);
 
-        cadastrarMenu.add(cadastrarProduto);
+            cadastrarMenu.add(cadastrarProduto);
 
-        pedidoMenu.add(novoPedidoItem);
-        pedidoMenu.add(historicoMenuItem);
+            pedidoMenu.add(novoPedidoItem);
+            pedidoMenu.add(historicoMenuItem);
 
-        tela.setJMenuBar(mb);
+            tela.setJMenuBar(mb);
 
-        cadastrarProduto.addActionListener(this);
+            cadastrarProduto.addActionListener(this);
+            novoPedidoItem.addActionListener(this);
 
-        tela.setVisible(true);
-    }
+            tela.setVisible(true);
+        }
 
 
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         Tela1 tela1 = new Tela1();
         tela1.criarTela();
         }
@@ -51,6 +52,9 @@ public class Tela1 implements ActionListener {
             if (e.getSource() == cadastrarProduto){
                 telacadas telacadas = new telacadas();
                 telacadas.setVisible(true);
+            } else if (e.getSource() == novoPedidoItem){
+                Novopedido novopedido = new Novopedido();
+                novopedido.setVisible(true);
             }
         }
     

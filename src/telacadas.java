@@ -29,7 +29,6 @@ public class telacadas extends JFrame implements ActionListener {
     JButton btlistar = new JButton("Listar");
 
     telacadas(){
-
         setTitle("Cadastrar Produto");
         setSize(300,350);
         setLocation(600, 200);
