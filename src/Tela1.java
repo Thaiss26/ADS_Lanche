@@ -41,11 +41,9 @@ public class Tela1 implements ActionListener {
 
         cadastrarProduto.addActionListener(this);
 
-        
         tela.setVisible(true);
 
     }
-
 
 
     public static void main(String[] args) {
@@ -53,11 +51,12 @@ public class Tela1 implements ActionListener {
         tela1.criarTela();
         }
 
-
         @Override
         public void actionPerformed(ActionEvent e) {
-            
-            throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
+            if (e.getSource() == cadastrarProduto){
+                telacadas telacadas = new telacadas();
+                telacadas.setVisible(true);
+            }
         }
     
     }

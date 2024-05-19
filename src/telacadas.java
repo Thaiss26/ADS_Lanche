@@ -10,17 +10,16 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class telacadas implements ActionListener {
+public class telacadas extends JFrame implements ActionListener {
 
     Produto pro;
     ArrayList<Produto> list = new ArrayList<Produto>();
 
-    JFrame telaCadas = new JFrame("Cadastrar Produto");
     JPanel painel = new JPanel();
 
     JLabel lbdesc = new JLabel("Produto");
     JLabel lbvalor = new JLabel("Valor");
-    JLabel lbquantidade = new JLabel("quantidade");
+    JLabel lbquantidade = new JLabel("Quantidade");
     JCheckBox c1 = new JCheckBox("disponível");
 
     JTextField txtdesc = new JTextField();
@@ -31,10 +30,13 @@ public class telacadas implements ActionListener {
     JButton btlistar = new JButton("Listar");
 
 
-    void criarTela(){
+    telacadas(){
 
-        telaCadas.setSize(300,350);
-        telaCadas.setLocation(200, 200);
+        setTitle("Cadastrar Produto");
+        setSize(300,350);
+        setLocation(200, 200);
+
+
         painel.setLayout(null);
 
 
@@ -44,10 +46,11 @@ public class telacadas implements ActionListener {
         txtvalor.setBounds(100, 90, 150, 30);
         lbquantidade.setBounds(15, 140, 80, 30);
         txtquantidade.setBounds(100, 140, 150, 30);
+        c1.setBounds(100,170,150,30);
 
-        btsalvar.setBounds(30, 190, 100, 30);
+        btsalvar.setBounds(30, 210, 100, 30);
         btsalvar.addActionListener(this);
-        btlistar.setBounds(150, 190, 100, 30);
+        btlistar.setBounds(150, 210, 100, 30);
         btlistar.addActionListener(this);
 
 
@@ -57,19 +60,20 @@ public class telacadas implements ActionListener {
         painel.add(txtvalor);
         painel.add(lbquantidade);
         painel.add(txtquantidade);
+        painel.add(c1);
         painel.add(btsalvar);
         painel.add(btlistar);
 
 
-        telaCadas.getContentPane().add(painel);
-        telaCadas.setVisible(true);
+        getContentPane().add(painel);
+
 
 
     }
 
     public static void main(String[] args) {
         telacadas telacadas = new telacadas();
-        telacadas.criarTela();
+        telacadas.setVisible(true);
     }
 
 
